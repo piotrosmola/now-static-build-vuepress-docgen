@@ -29,7 +29,7 @@ exports.build = async ({ files, entrypoint, workPath, config }) => {
 
   await runNpmInstall(entrypointFsDirname, ['--prefer-offline'])
 
-  if (await runPackageJsonScript(entrypointFsDirname, 'vue-docgen && vuepress build docs')) {
+  if (await runPackageJsonScript(entrypointFsDirname, 'docs:build')) {
     const distPath = path.join(workPath, mountpoint, (config && config.distDir) || 'dist')
     console.log('distPath', distPath)
     validateDistDir(distPath)
