@@ -24,8 +24,8 @@ exports.build = async ({ files, entrypoint, workPath, config }) => {
   const mountpoint = path.join(entrypoint, '..', '..', '..')
 
   console.log('Mountpoint', mountpoint)
-  console.log('Entrypoint', entrypointFsDirname)
   const entrypointFsDirname = path.join(workPath, mountpoint)
+  console.log('Entrypoint', entrypointFsDirname)
 
   await runNpmInstall(entrypointFsDirname, ['--prefer-offline'])
 
