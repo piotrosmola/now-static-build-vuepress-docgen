@@ -21,7 +21,7 @@ exports.build = async ({ files, entrypoint, workPath, config }) => {
   await download(files, workPath)
 
   console.log('running now-build-vuepress-docgen script...')
-  const mountpoint = path.join(entrypoint, '..', '..')
+  const mountpoint = path.join(entrypoint, '..', '..', '..')
   const entrypointFsDirname = path.join(workPath, mountpoint)
 
   await runNpmInstall(entrypointFsDirname, ['--prefer-offline'])
