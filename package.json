@@ -1,10 +1,10 @@
 {
-  "name": "now-static-build-storybook",
+  "name": "now-static-build-vuepress-docgen",
   "version": "0.1.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/penfoldtechnology/now-static-build-storybook.git"
+    "url": "https://github.com/piotrosmola/now-static-build-vuepress-docgen.git"
   },
   "scripts": {}
 }

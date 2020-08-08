@@ -20,7 +20,7 @@ exports.build = async ({ files, entrypoint, workPath, config }) => {
   console.log('downloading user files...')
   await download(files, workPath)
 
-  console.log('running now-build-storybook script...')
+  console.log('running now-build-vuepress-docgen script...')
   const mountpoint = path.join(entrypoint, '..', '..')
   const entrypointFsDirname = path.join(workPath, mountpoint)
 

@@ -1,1 +1,3 @@
 # now-static-build-vuepress-docgen
+
+IN PROGRESS...
