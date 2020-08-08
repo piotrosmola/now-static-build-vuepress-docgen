@@ -22,12 +22,16 @@ exports.build = async ({ files, entrypoint, workPath, config }) => {
 
   console.log('running now-build-vuepress-docgen script...')
   const mountpoint = path.join(entrypoint, '..', '..', '..')
+
+  console.log('Mountpoint', mountpoint)
+  console.log('Entrypoint', entrypointFsDirname)
   const entrypointFsDirname = path.join(workPath, mountpoint)
 
   await runNpmInstall(entrypointFsDirname, ['--prefer-offline'])
 
   if (await runPackageJsonScript(entrypointFsDirname, 'vue-docgen && vuepress build docs')) {
     const distPath = path.join(workPath, mountpoint, (config && config.distDir) || 'dist')
+    console.log('distPath', distPath)
     validateDistDir(distPath)
     return glob('**', distPath, mountpoint)
   }
