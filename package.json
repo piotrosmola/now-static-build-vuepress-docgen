@@ -1,0 +1,10 @@
+{
+  "name": "now-static-build-storybook",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/penfoldtechnology/now-static-build-storybook.git"
+  },
+  "scripts": {}
+}
